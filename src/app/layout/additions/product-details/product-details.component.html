@@ -1,0 +1,25 @@
+<div class="container mx-auto flex items-center justify-center my-5">
+
+@if(details){
+      <div class="w-4/12 p-3">
+      <owl-carousel-o [options]="customOptions">
+
+    @for (item of details.data.images ; track $index) {
+ <ng-template carouselSlide >
+        <img [src]="item" class="w-full" [alt]="" >
+      </ng-template>
+    }
+  </owl-carousel-o>
+
+    </div>
+    <div class="w-7/12 p-3">
+<h1 class="text-center text-3xl py-5">{{details.data.title}}</h1>
+<p class="text-gray-500 py-5">{{details.data.description}}</p>
+<P>{{details.data.category.name}}</P>
+<p>{{details.data.price}} EGP</p>
+<BUtton (click)="addToCart(details.data._id)" class="text-white text-2xl hover:bg-lime-400 my-5 bg-main-clore w-full py-4 rounded-xl">Add to cart</BUtton>
+    </div>
+ 
+}
+ 
+</div>

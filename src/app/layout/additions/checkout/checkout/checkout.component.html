@@ -1,0 +1,24 @@
+<h1 class="text-5xl shadow-lg font-mainFont my-4 text-center">shiping Ditiles</h1>
+<form class="w-[70%] mx-auto" [formGroup]="shipingDitiles">
+<div class="mb-5">
+    <label for="paymentMathod" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">paymentMathod</label>
+    <input (change)="onchange($event)" name="paymentMathod"  value="cash" type="radio" id="cash"  class="bg-gray-50 border border-gray-300  text-main-clore text-sm rounded-lg  mx-2 "  required />
+   <label for="cash">cash</label>
+    <input (change)="onchange($event)" name="paymentMathod" value="visa" type="radio" id="visa" class="bg-gray-50 border border-gray-300 text-main-clore text-sm rounded-lg  mx-2   dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  required />
+    <label for="visa">visa</label>
+  
+  </div>
+  <div class="mb-5">
+    <label for="detalis" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your detalis</label>
+    <input formControlName="detalis" type="text" id="detalis" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="detalis" required />
+  </div>
+    <div class="mb-5">
+    <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your phone</label>
+    <input formControlName="phone" type="tel" id="phone" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="phone" required />
+  </div>
+<div class="mb-5">
+    <label for="city" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your city</label>
+    <input formControlName="city" type="text" id="city" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="city" required />
+  </div>
+  <button (click)="continue()" class="w-full rounded-lg bg-main-clore text-white p-3 my-5">continue</button>
+</form>
